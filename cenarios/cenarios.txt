@@ -1,0 +1,45 @@
+Funcionalidade: Classificados
+
+Cenário 1: Cadastrar no OLX
+Dado Eu sou um cliente particular realizando um cadastro
+Quando Eu acesso o site "http://www.olx.com.br/"
+  E clico sobre o link "Cadastre-se"
+Então devo ver uma página de cadastro com o Título "Crie sua conta na OLX. É simples, rápido e grátis!", um formulário de cadastro e uma opção "Conecte-se com o Facebook"
+
+Quando Eu informo um "nome de usuario" no campo "Nome de usuário:" e "email" no campo "E-mail:" e "senha" no campo "Senha:" e "particular" no campo "Eu sou:" e "Concordo com os Termos e Condições da OLX"
+  E clico no botão "Cadastrar agora!"
+Então devo ver uma página de cadastro realizado com sucesso e um link "Voltar à página principal da OLX"
+
+Quando Eu informo um "nome de usuario" no campo "Nome de usuário:" que já existe cadastro
+  E saio do campo
+Então devo ver a mensagem " Ops! Alguém já usa esse nome de usuário. Tente outro, por favor."
+
+
+Cenário 2: Buscar anúncios
+Dado Eu sou um cliente particular buscando anuncios
+Quando Eu acesso o site "http://www.olx.com.br/"
+  E clico sobre o link "Anúncios do CE"
+Então devo ver uma página de pesquisa com um menu de "Busca por categorias" e um campo de pesquisa
+
+Quando Eu informo o texto "iPhone 5S" no campo de pesquisa
+  E clico sobre o botão "Pesquisar"
+Então devo ver uma página com o resultado da pesquisa
+
+Quando Eu informo o texto "Galaxy S4" no campo de pesquisa
+  E clico sobre o botão "Pesquisar"
+Então devo ver uma página com o resultado da pesquisa
+
+
+Cenário 3: Ver meus anúncios
+Dado Eu sou um cliente verificando meus anuncios
+Quando Eu acesso o site "http://www.olx.com.br/"
+  E clico sobre o link "Meus anúncios"
+Então devo ver uma página com o Título "Entrar na minha conta"
+
+Quando Eu informo um email no campo "E-mail:" da tela "Receba por e-mail"
+  E clico no botão "Enviar"
+Então devo ver a mensagem "O link para gerenciar os seus anúncios pelo MeuOLX foi enviado!
+
+Quando Eu informo email ou nome de usuario no campo "E-mail ou nome de usuário" e senha no campo "Senha:" 
+  E clico no botão "Entrar"
+Então devo ver uma página com o título "MeuOLX" e todos os meus anúncios
